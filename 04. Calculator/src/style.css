@@ -1,0 +1,69 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #1b1b1b; /* Dark background for contrast */
+}
+
+.calculator {
+  position: relative;
+  display: grid;
+}
+
+.calculator .value {
+  grid-column: span 4;
+  height: 100px;
+  text-align: right;
+  border: none;
+  outline: none;
+  padding: 10px;
+  font-size: 18px;
+  background: #2d2a29; /* Slightly lighter background for display */
+  color: #e8e4d8; /* Light text color for readability */
+}
+
+.calculator span {
+  display: grid;
+  width: 60px;
+  height: 60px;
+  background: #292929; /* Button background */
+  place-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: #fff;
+  transition: background 0.2s ease;
+}
+
+.calculator span:active {
+  background: rgb(204, 52, 62); /* Main color on active press */
+  color: #fff;
+}
+
+.calculator span.clear {
+  grid-column: span 2;
+  width: 120px;
+  background: rgb(204, 52, 62); /* Main color for clear button */
+  color: #fff;
+}
+
+.calculator span.plus {
+  grid-row: span 2;
+  height: 120px;
+  background: #444; /* Darker color for the plus button */
+}
+
+.calculator span.equal {
+  background: rgb(204, 52, 62); /* Main color for the equal button */
+  color: #fff;
+}
+
+.calculator span:hover {
+  background: #3e3e3e; /* Hover effect for buttons */
+}
